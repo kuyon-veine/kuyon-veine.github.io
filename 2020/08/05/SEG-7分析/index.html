@@ -8,16 +8,25 @@
   <link rel="dns-prefetch" href="kuyon-veine.github.io">
   <title>SEG#7分析 | 一个头秃的强化基础班现充的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="undefined">
+  <meta name="description" content="80分。倒一。我 裂    开 了。
+%%% [TosakaUCW]{https://vijos.org/d/Beginner_OJ/user/136470} 巨佬，270分orz
+比赛链接：[SEG#7]{https://vijos.org/d/Beginner_OJ/contest/5f28f114f4136203aa91d1c8}
+T1：最美回文第一眼看到题，暴搜，一个一个看过去，顺便记录最">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SEG#7分析">
 <meta property="og:url" content="kuyon-veine.github.io/2020/08/05/SEG-7分析/index.html">
 <meta property="og:site_name" content="一个头秃的强化基础班现充的博客">
-<meta property="og:description" content="undefined">
-<meta property="og:updated_time" content="2020-08-05T10:29:00.558Z">
+<meta property="og:description" content="80分。倒一。我 裂    开 了。
+%%% [TosakaUCW]{https://vijos.org/d/Beginner_OJ/user/136470} 巨佬，270分orz
+比赛链接：[SEG#7]{https://vijos.org/d/Beginner_OJ/contest/5f28f114f4136203aa91d1c8}
+T1：最美回文第一眼看到题，暴搜，一个一个看过去，顺便记录最">
+<meta property="og:updated_time" content="2020-08-05T11:34:13.985Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SEG#7分析">
-<meta name="twitter:description" content="undefined">
+<meta name="twitter:description" content="80分。倒一。我 裂    开 了。
+%%% [TosakaUCW]{https://vijos.org/d/Beginner_OJ/user/136470} 巨佬，270分orz
+比赛链接：[SEG#7]{https://vijos.org/d/Beginner_OJ/contest/5f28f114f4136203aa91d1c8}
+T1：最美回文第一眼看到题，暴搜，一个一个看过去，顺便记录最">
   
     <link rel="alternative" href="/atom.xml" title="一个头秃的强化基础班现充的博客" type="application/atom+xml">
   
@@ -42,7 +51,7 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: 66ccff"></div>
+<div class="overlay" style="background: 66CCFF"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -91,7 +100,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: 66ccff"></div>
+  	<div class="overlay js-overlay" style="background: 66CCFF"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -161,7 +170,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>80分。倒一。我 裂    开 了。</p>
+<p>%%% [TosakaUCW]{<a href="https://vijos.org/d/Beginner_OJ/user/136470}" target="_blank" rel="external">https://vijos.org/d/Beginner_OJ/user/136470}</a> 巨佬，270分orz</p>
+<p>比赛链接：[SEG#7]{<a href="https://vijos.org/d/Beginner_OJ/contest/5f28f114f4136203aa91d1c8}" target="_blank" rel="external">https://vijos.org/d/Beginner_OJ/contest/5f28f114f4136203aa91d1c8}</a></p>
+<h1 id="T1：最美回文"><a href="#T1：最美回文" class="headerlink" title="T1：最美回文"></a>T1：最美回文</h1><p>第一眼看到题，暴搜，一个一个看过去，顺便记录最大值，初始代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(<span class="meta-string">"-O2"</span>)</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> ull unsigned long long</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> fora(x,a,b) for(int x=a;x&lt;=b;x++)</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> forb(x,a,b) for(int x=a;x&gt;=b;x--)</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> inf (0x7fffffff)</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> abss(x) ((x)&gt;(0)?(x):(-1)*(x))</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> maxx(a,b) ((a)&gt;(b)?(a):(b))</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> minn(a,b) ((a)&lt;(b)?(a):(b))</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> sqre(x) ((x)*(x))</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> cube(x) ((x)*(x)*(x))</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> fastiostream ios::sync_with_stdio(false)</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> beaudeg[<span class="number">26</span>]=&#123;&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	fora(i,<span class="number">0</span>,<span class="number">25</span>)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;beaudeg[i]);<span class="comment">//读入</span></div><div class="line">	&#125;</div><div class="line">	<span class="keyword">char</span> str[<span class="number">1000001</span>]=&#123;&#125;;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%s"</span>,str);</div><div class="line">	<span class="keyword">int</span> he,ta;</div><div class="line">	<span class="keyword">int</span> mabedeg=<span class="number">0</span>-inf,bedeg;</div><div class="line">	fora(i,<span class="number">0</span>,<span class="built_in">strlen</span>(str)<span class="number">-1</span>)<span class="comment">//逐位暴力搜索</span></div><div class="line">	&#123;</div><div class="line">		bedeg=beaudeg[str[i]-<span class="string">'a'</span>];<span class="comment">//向两边搜索</span></div><div class="line">		<span class="keyword">for</span> (he=i+<span class="number">1</span>, ta=i<span class="number">-1</span>;he&lt;=<span class="built_in">strlen</span>(str)<span class="number">-1</span>&amp;&amp;ta&gt;=<span class="number">0</span>&amp;&amp;str[he]==str[ta];he++, ta--)<span class="comment">//遇到不同字符或边界则停止</span></div><div class="line">		&#123;</div><div class="line">			bedeg+=(beaudeg[str[he]-<span class="string">'a'</span>]&lt;&lt;<span class="number">1</span>);<span class="comment">//每轮加上字符值</span></div><div class="line">		&#125;</div><div class="line">		mabedeg=maxx(mabedeg, bedeg);<span class="comment">//比较，记录</span></div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, mabedeg);<span class="comment">//输出</span></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>提交，30分。</p>
+<p>我裂开了。</p>
+<p>不是因为TLE，而是因为WA。</p>
+<p>我这么严密的程序，怎么可能会WA呢？</p>
+<p>仔细一看数据，不对啊阿sir，我的数据居然比答案小？</p>
+<p>挠了挠头<del>半小时之后</del>，啊！回文数又不只是cbabc，可能是cbaabc啊！</p>
+<p>我太巨了！</p>
+<p>修改了一下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> ull unsigned long long</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> fora(x,a,b) for(int x=a;x&lt;=b;x++)</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> forb(x,a,b) for(int x=a;x&gt;=b;x--)</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> inf (0x7fffffff)</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> abss(x) ((x)&gt;(0)?(x):(-1)*(x))</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> maxx(a,b) ((a)&gt;(b)?(a):(b))</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> minn(a,b) ((a)&lt;(b)?(a):(b))</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> sqre(x) ((x)*(x))</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> cube(x) ((x)*(x)*(x))</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> fastiostream ios::sync_with_stdio(false)</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> beaudeg[<span class="number">26</span>]=&#123;&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	fora(i, <span class="number">0</span>, <span class="number">25</span>)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;beaudeg[i]);<span class="comment">//读入</span></div><div class="line">	&#125;</div><div class="line">	<span class="keyword">char</span> str[<span class="number">1000001</span>]=&#123;&#125;;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%s"</span>, str);</div><div class="line">	<span class="keyword">int</span> he, ta;</div><div class="line">	<span class="keyword">int</span> mabedeg=<span class="number">0</span>-inf, bedeg;</div><div class="line">	fora(i, <span class="number">0</span>, <span class="built_in">strlen</span>(str)<span class="number">-1</span>)<span class="comment">//逐位暴力搜索</span></div><div class="line">	&#123;</div><div class="line">		bedeg=beaudeg[str[i]-<span class="string">'a'</span>];<span class="comment">//单字符向两边搜索</span></div><div class="line">		<span class="keyword">for</span> (he=i+<span class="number">1</span>, ta=i<span class="number">-1</span>;he&lt;=<span class="built_in">strlen</span>(str)<span class="number">-1</span>&amp;&amp;ta&gt;=<span class="number">0</span>&amp;&amp;str[he]==str[ta];he++, ta--)<span class="comment">//遇到不同字符或边界则停止</span></div><div class="line">		&#123;</div><div class="line">			bedeg+=(beaudeg[str[he]-<span class="string">'a'</span>]&lt;&lt;<span class="number">1</span>);<span class="comment">//每轮加上字符值</span></div><div class="line">		&#125;</div><div class="line">		mabedeg=maxx(mabedeg, bedeg);<span class="comment">//比较，记录</span></div><div class="line">		<span class="keyword">if</span> (str[i]==str[i+<span class="number">1</span>])<span class="comment">//双字符特判</span></div><div class="line">		&#123;</div><div class="line">			bedeg=beaudeg[str[i]-<span class="string">'a'</span>]&lt;&lt;<span class="number">1</span>;</div><div class="line">			<span class="keyword">for</span> (he=i+<span class="number">2</span>, ta=i<span class="number">-1</span>;he&lt;=<span class="built_in">strlen</span>(str)<span class="number">-1</span>&amp;&amp;ta&gt;=<span class="number">0</span>&amp;&amp;str[he]==str[ta];he++, ta--)</div><div class="line">			&#123;</div><div class="line">				bedeg+=(beaudeg[str[he]-<span class="string">'a'</span>]&lt;&lt;<span class="number">1</span>);</div><div class="line">			&#125;</div><div class="line">			mabedeg=maxx(mabedeg, bedeg);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, mabedeg);<span class="comment">//输出</span></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>漂亮！我不WA了！</p>
+<p>但是，我还是T啊。</p>
+<p>继续改进。</p>
+<p>经过尝试，开register和吸氧（无论是氧气还是臭氧）都没用。</p>
+<p>算法改进。</p>
+
       
 
       
